@@ -42,6 +42,8 @@ $response_image = json_decode($curl_s, 1);
 
 curl_close($curl);
 
+
+// сохраняем картинку
 $request_params = [
     'server' => $response_image['server'],
     'photo' => $response_image['photo'],
@@ -60,7 +62,7 @@ $request_params = [
     'domain' => 'www.block-modul.ru',
     'chat_id' => 36,
     'attachment' => 'photo'.$result_image['response'][0]['owner_id'].'_'.$result_image['response'][0]['id'],
-    'message' => 'Послушай музычку',
+    'message' => 'Проект деревянного дома',
     'v' => '5.53',
     'access_token' => '2b1f1e925e33e21951d8bf466d767d1787e14b50eec99492185f227e0c686811d7e116e8cc48e8e2f220f'
 ];
